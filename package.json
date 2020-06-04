@@ -2,13 +2,27 @@
   "name": "easymarket",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "antd-mobile": "^2.2.9",
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^0.2.12",
+    "history": "^4.7.2",
+    "node-sass": "^4.11.0",
+    "postcss-px2rem": "^0.3.0",
+    "prop-types": "^15.6.2",
+    "px2rem-loader": "^0.1.9",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-lazyload": "^2.3.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "react-transition-group": "^2.5.2",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2",
+    "sass-loader": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,19 +30,18 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://202.96.155.121:8888",
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "babel-plugin-import": "^1.11.0",
+    "react-app-rewired": "^2.1.0"
   }
 }
