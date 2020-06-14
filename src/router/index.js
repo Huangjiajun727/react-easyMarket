@@ -5,6 +5,7 @@ const Profile = AsyncComponent(() => import('../view/profile'));
 const Login = AsyncComponent(() => import('../view/login'));
 const Topic = AsyncComponent(() => import('../view/topic'));
 const Cart = AsyncComponent(() => import('../view/cart'));
+const Catelog = AsyncComponent(() => import('../view/catelog'));
 
 const routes = [
     {
@@ -36,6 +37,12 @@ const routes = [
         link: '/cart',
         isTab: true,
         component: Cart
+    },
+    {
+        name: '分类',
+        link: '/catelog',
+        isTab: true,
+        component: Catelog
     },
 ]
 

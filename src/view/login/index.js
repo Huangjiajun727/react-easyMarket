@@ -10,14 +10,8 @@ class Login extends Component {
     async submitLogin() {
         const mobile = this.refs.phoneNumber.value
         const password = this.refs.passwords.value
-        // const { errno, data, errmsg } = await postLogin({ mobile, password })
-        var errno = 0;
-        var errmsg = "";
-        var data = {
-            mobile: "15323807318",
-            password: "123456",
-            sessionKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNiwiaWF0IjoxNTkyMTAyMTE2fQ.KcuCs9Ygu493IKP_T9ZGkIWCcJpUUmtCt0U5qvZ3YRc"
-        }
+        const { errno, data, errmsg } = await postLogin({ mobile, password });
+        
         if (errno === 0) {
             window.localStorage.setItem('token', data.sessionKey)
             window.localStorage.setItem('nideShopUser', data.mobile)

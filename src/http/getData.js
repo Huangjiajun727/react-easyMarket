@@ -53,3 +53,31 @@ export const postCartUpdate = (parmas = {}) => post('/cart/update', parmas);
    * */
 export const postCartDelete = (parmas = {}) => post('/cart/delete', parmas);
 
+/*
+   * 分类页初始化信息获取
+   * */
+export const getCatalogInitData = parmas => get('/catalog/index', parmas);
+
+/*
+  * 根据分类ID获取当前分类信息和子分类
+  * parmas:
+  *   id: 分类Id
+  * */
+export const getCatalogMsg = parmas => get('/catalog/current', parmas);
+
+/*
+  * 获取在售商品数量
+  * */
+export const getSellGoodsCount = parmas => get('/goods/count', parmas);
+
+/*
+*  根据分类Id或者制造商Id获取商品
+*  parmas:
+*   brandId: 制造商Id（非必填）
+*   categoryId: 分类Id（非必填）
+*   sort: id(默认排序)、price(价格排序)
+*   order: 排序方式
+*   page: 当前页数
+*   size: 每页数据量
+* */
+export const getGoodsData = parmas => get('/goods/list', parmas);
