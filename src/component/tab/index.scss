@@ -1,0 +1,58 @@
+@import '../../assets/style/mixin.scss';
+
+.tab {
+    @include fj();
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: 0 -3px 10px 0 rgba(0,0,0,.2);
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 999;
+}
+.tab-item {
+    @include fj();
+
+    padding: 10px 0 6px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.tab-icon {
+    margin-bottom: 6px;
+	i {
+        @include sc(18px, #000);
+        transition: all 0.5s ease-in-out;
+	}
+}
+.tab-name {
+    @include sc(12px, #000);
+}
+.tab-item-active {
+	.tab-icon {
+        animation: bounceTo 0.5s;
+    }
+    i ,.tab-name {
+        color: #2196f3;
+    }
+}
+
+@keyframes bounceTo {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}

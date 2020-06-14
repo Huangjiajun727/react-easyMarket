@@ -1,0 +1,269 @@
+@import '../../assets/style/mixin.scss';
+
+.home {
+    padding-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.banner-img>img {
+    width: 100%;
+    height: 200px;
+}
+
+figure>img {
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 10px;
+
+    >div {
+        background-color: #fff;
+    }
+}
+
+section>h2 {
+    @include sc(16px, #000);
+
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+section a {
+    display: block;
+    width: 50%;
+}
+
+figure {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+    .name {
+        @include sc(16px, #000);
+    }
+
+    .info {
+        @include sc(14px, darkgrey);
+    }
+
+    .price {
+        @include sc(14px, darkred);
+    }
+}
+
+.channer-wrap {
+    @include fj();
+
+    padding: 12px 0 5px;
+    width: 100%;
+    align-items: center;
+
+    .channel-item {
+        @include fj(center);
+
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 1;
+
+        img {
+            @include wh(28px, 28px);
+
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        span {
+            @include sc(12px, #000);
+        }
+    }
+}
+
+.brand-wrapper {
+
+    .brand-con {
+        @include fj(flex-start);
+        flex-wrap: wrap;
+        background: none !important;
+    }
+
+    .brand-item figure {
+        position: relative;
+
+        figcaption {
+            @include fjcl();
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            .name {
+                margin-bottom: 6px;
+                font-size: 14px;
+            }
+
+            .price {
+                @include sc(12px, darkgrey);
+            }
+        }
+    }
+}
+
+.newgoods-wrapper {
+    background-color: #fff;
+
+    .newgoods-con {
+        @include fj(flex-start);
+        flex-wrap: wrap;
+    }
+
+    .newgoods-item figure {
+        * {
+            margin-bottom: 10px;
+        }
+
+        img {
+            height: 140px;
+        }
+
+        figcaption {
+            @include fjcl();
+
+            align-items: center;
+        }
+    }
+}
+
+.hotgoods-wrapper {
+    padding: 0 6px;
+
+    .hotgoods-con {
+        @include fjcl();
+    }
+
+    .hotgoods-item {
+        width: 100%;
+    }
+
+    .hotgoods-item figure {
+        @include fj(flex-start);
+
+        align-items: center;
+        border-top: 1px solid #e8e8e8;
+
+        img {
+            margin-right: 10px;
+            width: 40%;
+        }
+    }
+
+    figcaption {
+        @include fjcl();
+
+        * {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
+
+.topgoods-wrapper {
+    .topgoods-con {
+        padding-bottom: 10px;
+    }
+
+    .topgoods-item {
+        width: 100%;
+    }
+
+    .topgoods-item figure {
+        @include fjcl();
+
+        width: 100%;
+
+        img {
+            height: 200px;
+        }
+
+        figcaption {
+            * {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            div {
+                .topgoods-title {
+                    @include sc(16px, #000);
+                }
+            }
+
+            .info {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+
+.category-wrapper {
+    h2 {
+        background: none;
+        font-weight: normal;
+    }
+
+    * {
+        margin-bottom: 10px;
+    }
+
+    .category-con {
+        @include fj(flex-start);
+        flex-wrap: wrap;
+    }
+
+    .category-item figure {
+        >img {
+            height: 140px;
+        }
+
+        figcaption {
+            @include fjcl();
+
+            align-items: center;
+
+            .name {
+                display: block;
+                width: 90%;
+                text-align: center;
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    .category-more {
+        @include fjcl();
+        align-items: center;
+        justify-content: center;
+
+        div {
+            @include sc(14px, #000);
+        }
+
+        img {
+            @include wh(30px, 30px);
+
+            margin-top: 10px;
+        }
+    }
+}

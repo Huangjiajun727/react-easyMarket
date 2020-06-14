@@ -1,0 +1,45 @@
+@import '../../assets/style/mixin.scss';
+
+.loginBox {
+    @include wh(100%, 100%);
+    background: white;
+
+    .logo {
+        @include fj(center);
+
+        padding: 50px 0 25px 0;
+        width: 100%;
+        align-items: center;
+
+        img {
+            width: 160px;
+        }
+    }
+
+    .loginMain {
+        padding: 90px 20px 0 20px;
+
+        .inputWrap {
+            @include fj(center);
+
+            height: 90px;
+            align-items: center;
+
+            input {
+                @include wh(100%, 90%);
+
+                display: block;
+                border: none;
+                font-size: 20px;
+            }
+        }
+
+        .loginBtn {
+            margin-top: 50px;
+        }
+    }
+}
+
+.login {
+    height: 100%;
+}

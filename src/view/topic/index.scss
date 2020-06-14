@@ -1,0 +1,44 @@
+@import '../../assets/style/mixin.scss';
+
+
+.topic-item {
+    display: block;
+    margin-top: 10px;
+    height: 290px;
+    background: white;
+}
+
+.topic-item>img {
+    @include wh(100%, 200px);
+}
+
+.topic-item-title {
+    padding: 5px;
+    padding-top: 10px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.topic-item-subtitle {
+    @include sc(14px, gray);
+
+    padding: 5px 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.topic-item-price {
+    @include sc(14px, red);
+
+    padding: 5px;
+    padding-bottom: 10px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.tabpage-content .topic-item:nth-of-type(1) {
+    margin-top: 0;
+}

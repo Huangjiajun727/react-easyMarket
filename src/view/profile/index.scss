@@ -1,0 +1,68 @@
+@import '../../assets/style/mixin.scss';
+
+
+#minePage {
+    .userMsgWrap {
+        @include bis('http://yanxuan.nosdn.127.net/d069279e5834bbca17065a9855a014bf.png');
+
+        display: flex;
+        padding: 32px 20px;
+        height: 80px;
+        box-sizing: content-box;
+
+        .userLogo {
+            @include wh(80px, 100%);
+            @include borderRadius(50%);
+            @include bis('http://yanxuan.nosdn.127.net/8945ae63d940cc42406c3f67019c5cb6.png');
+        }
+
+        .userMsgs {
+            flex: 1;
+            padding: 10px;
+            padding-right: 0;
+            height: 100%;
+            font-size: 16px;
+
+            div {
+                height: 50%;
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+        }
+    }
+
+    .userPower {
+        display: flex;
+        flex-wrap: wrap;
+
+        &>div {
+            @include wh(33.333%, 123px);
+            background: white;
+            border: 1px solid gainsboro;
+
+            i {
+                @include sc(30px, #9e9e9e);
+
+                display: block;
+                padding-top: 40px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+
+            div {
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .loginOut {
+        @include wh(100%, 50px);
+        margin: 10px 0;
+        background: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 14px;
+    }
+}
